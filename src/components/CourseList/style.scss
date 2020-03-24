@@ -1,0 +1,16 @@
+.courseList {
+    display: inline-flex;
+    flex-direction: column;
+    
+    a {
+        margin: 15px 0 15px 0;
+    }
+
+    &>a:first-child {
+        margin-top: 0;
+    }
+
+    &>a:last-child {
+        margin-bottom: 0;
+    }
+}
