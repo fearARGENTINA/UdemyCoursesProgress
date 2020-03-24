@@ -1,29 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CourseInfo from './CourseInfo';
 import CoursePic from './CoursePic';
 import './style.scss';
 
-const Course = ({ data : { id, title, numLectures, instructorJob, instructorId, completed, lastAccessedTime, enrollmentTime, imgSrc} }) => (
-    <a href={`https://www.udemy.com/course/${id}`} >
-        <div className={"course"}>
-            <CoursePic imgSrc={imgSrc} />
-            <CourseInfo courseData={{title, numLectures, instructorJob, instructorId, completed, enrollmentTime}}/>
-        </div>
-    </a>
-);
+class Course extends Component {
+    render() {
+        const {image_240x135, cursoId, ...data} = this.props.data;
+        return (
+            <a href={`https://www.udemy.com/course/${cursoId}`}>
+                <div className={"course"}>
+                    <CoursePic imgSrc={image_240x135} />
+                    <CourseInfo courseData={data} />
+                </div>
+            </a>
+        );
+    }
+};
 
 Course.propTypes = {
     data: PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        numLectures: PropTypes.number.isRequired,
-        instructorJob: PropTypes.string.isRequired,
-        instructorId: PropTypes.number.isRequired,
-        completed: PropTypes.number.isRequired,
-        lastAccessedTime: PropTypes.string.isRequired,
-        enrollmentTime: PropTypes.string.isRequired,
-        imgSrc: PropTypes.string.isRequired,
+        image_240x135: PropTypes.string.isRequired, 
+        title: PropTypes.string.isRequired, 
+        num_lectures: PropTypes.number.isRequired, 
+        instructor_job: PropTypes.string.isRequired, 
+        instructor_name: PropTypes.string.isRequired, 
+        completion_ratio: PropTypes.number.isRequired, 
+        enrollment_time: PropTypes.string.isRequired
     }),
 };
 
