@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'react-bootstrap/Image';
 
 const CoursePic = ({ imgSrc }) => (
     <div className={"coursePic"}>
-        <img src={ imgSrc } alt={ imgSrc }/>
+        <Image src={ imgSrc } alt={ imgSrc } />
     </div>
 );
 

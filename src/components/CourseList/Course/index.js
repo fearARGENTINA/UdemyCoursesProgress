@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CourseInfo from './CourseInfo';
 import CoursePic from './CoursePic';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import './style.scss';
 
 class Course extends Component {
     render() {
-        const {image_240x135, cursoId, ...data} = this.props.data;
+        const { image_240x135, cursoId, ...data } = this.props.data;
         return (
             <a href={`https://www.udemy.com/course/${cursoId}`}>
                 <div className={"course"}>
@@ -14,18 +16,20 @@ class Course extends Component {
                     <CourseInfo courseData={data} />
                 </div>
             </a>
+
+
         );
     }
 };
 
 Course.propTypes = {
     data: PropTypes.shape({
-        image_240x135: PropTypes.string.isRequired, 
-        title: PropTypes.string.isRequired, 
-        num_lectures: PropTypes.number.isRequired, 
-        instructor_job: PropTypes.string.isRequired, 
-        instructor_name: PropTypes.string.isRequired, 
-        completion_ratio: PropTypes.number.isRequired, 
+        image_240x135: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        num_lectures: PropTypes.number.isRequired,
+        instructor_job: PropTypes.string.isRequired,
+        instructor_name: PropTypes.string.isRequired,
+        completion_ratio: PropTypes.number.isRequired,
         enrollment_time: PropTypes.string.isRequired
     }),
 };

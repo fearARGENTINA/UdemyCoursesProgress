@@ -1,9 +1,8 @@
 .courseList {
-    display: inline-flex;
-    flex-direction: column;
-    
+    width: 100vw;
     a {
-        margin: 15px 0 15px 0;
+        width: 240px;
+        margin: 15px auto;
     }
 
     &>a:first-child {
