@@ -19,10 +19,11 @@ a {
 }
 
 .courseInfo {
+	height: 200px;
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	padding: 5px 15px 0 15px;
+	padding: 5px 15px 10px 15px;
 	width: 100%;
 	overflow: hidden;
 
@@ -53,11 +54,8 @@ a {
 	}
 
 	.progress {
+		height: 20px;
 		width: 100%;
-		margin-top: -20px;
-		position: relative;;
-		bottom: 0;
-		left: 0;
 	}
 }
 

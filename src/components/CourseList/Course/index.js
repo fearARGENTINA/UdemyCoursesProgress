@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CourseInfo from './CourseInfo';
 import CoursePic from './CoursePic';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './style.scss';
 
 class Course extends Component {
